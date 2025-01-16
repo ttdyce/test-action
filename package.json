@@ -1,0 +1,23 @@
+{
+  "name": "test-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttdyce/test-action.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ttdyce/test-action/issues"
+  },
+  "homepage": "https://github.com/ttdyce/test-action#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-symlink": "^2.1.4"
+  }
+}
