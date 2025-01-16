@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -27,9 +27,16 @@ jobs:
 
       - run: echo ${{ github.event.repository.name }}
 
-      - run: pwd
-      - run: ls
-      - run: ls ..
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          repository: ttdyce/Concept-Note-insider
+          tag_name: ${{ github.ref }}
+          name: Release ${{ github.ref_name }}
+          draft: true
+          prerelease: true
+          # files: /Users/runner/work/${{ github.event.repository.name }}/Concept-Note-darwin-arm64.zip
+
         
       # Runs a single command using the runners shell
       # - name: Run a one-line script
