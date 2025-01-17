@@ -28,7 +28,8 @@ jobs:
       - run: echo ${{ github.event.repository.name }}
 
       - run: gh release create 0.1.0 -d -p -R ttdyce/Concept-Note-insider --title "test release" -n ""
-        env: GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env: 
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
       # Runs a single command using the runners shell
       # - name: Run a one-line script
