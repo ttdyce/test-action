@@ -27,19 +27,8 @@ jobs:
 
       - run: echo ${{ github.event.repository.name }}
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.INSIDER_RELEASE_TOKEN }} 
-        with:
-          repo: Concept-Note-insider
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: |
-            Insider build
-          draft: true
-          prerelease: true
+      - run: gh release create 0.1.0 -d -p -R ttdyce/Concept-Note-insider --title "test release" -n ""
+        env: GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
       # Runs a single command using the runners shell
       # - name: Run a one-line script
