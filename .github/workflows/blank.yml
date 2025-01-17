@@ -31,7 +31,7 @@ jobs:
         env: 
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
-      - run: gh release create 0.1.0 -d -p -R ttdyce/Concept-Note-insider --title "test release" -n ""
+      - run: gh release create 0.1.0 readme.md -d -p -R ttdyce/Concept-Note-insider --title "test release" -n ""
         env: 
           GH_TOKEN: ${{ secrets.INSIDER_RELEASE_TOKEN }}
 
