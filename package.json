@@ -19,5 +19,9 @@
   "devDependencies": {
     "gulp": "^5.0.0",
     "gulp-symlink": "^2.1.4"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0"
   }
 }
