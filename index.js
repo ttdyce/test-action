@@ -6,7 +6,8 @@ main();
 
 async function main(){
   try {
-    await exec.exec('npm install')
+    const code = await exec.exec('npm install')
+    console.log(`exit code: ${code}!`);
   
     // `who-to-greet` input defined in action metadata file
     const nameToGreet = core.getInput('who-to-greet');
