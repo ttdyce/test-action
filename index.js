@@ -6,7 +6,11 @@ main();
 
 async function main(){
   try {
-    const code = await exec.exec('npm install')
+    var code;
+    code = await exec.exec('npm install')
+    console.log(`exit code: ${code}!`);
+    
+    code = await exec.exec('npm run gulp vscode-darwin-arm64-min')
     console.log(`exit code: ${code}!`);
   
     // `who-to-greet` input defined in action metadata file
